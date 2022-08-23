@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - LeLearn</title>
+    <link rel="stylesheet" href="./assets/css/styleHome.css">
+</head>
+
+<body>
+    <div class="navigation">
+        <ul>
+            <li>
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="people-outline"></ion-icon>
+                    </span>
+                    <span class="title">Le Learn</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" onclick="ShowHide()">
+                    <span class="icon">
+                        <ion-icon name="people-outline"></ion-icon>
+                    </span>
+                    <span class="title">Usuarios</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" onclick="abrirTreinamento()">
+                    <span class="icon">
+                        <ion-icon name="bookmarks-outline"></ion-icon>
+                    </span>
+                    <span class="title">Treinamentos</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" onclick="abrirCurso()">
+                    <span class="icon">
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                    </span>
+                    <span class="title">Cursos</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" onclick="abrirVideos()">
+                    <span class="icon">
+                        <ion-icon name="videocam-outline"></ion-icon>
+                    </span>
+                    <span class="title">Videos</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" onclick="abrirComentarios()">
+                    <span class="icon">
+                        <ion-icon name="chatbubbles-outline"></ion-icon>
+                    </span>
+                    <span class="title">Comentarios</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" onclick="logout(); return false">
+                    <span class="icon">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                    </span>
+                    <span class="title">Sing Out</span>
+                </a>
+            </li>
+
+
+        </ul>
+        <div class="toggle"></div>
+
+
+    </div>
+
+    <div class="navigationTopics">
+
+
+        <div class="form2">
+
+
+            <form>
+                <div class="inputBoxHome">
+                    <input type="text" placeholder="Digite o CPF" id="PesquisaPorCPF">
+                </div>
+                <div class="inputBoxHome1">
+                    <input type="text" placeholder="Digite o Nome" id="PesquisaPorNome">
+                </div>
+                <div class="inputBoxHome2">
+                    <input type="submit" value="Pesquisar" onclick="Pesquisar(); return false">
+                </div>
+
+                <div class="inputBoxHome3">
+                    <input type="submit" value="Cadastrar" onclick="Cadastrar(); return false">
+                </div>
+
+                <div class="inputBoxHome4">
+                    <input type="submit" value="Editar" onclick="Editar(); return false">
+                </div>
+
+                <div class="inputBoxHome5">
+                    <input type="submit" value="Excluir" onclick="Excluir(); return false">
+
+
+                </div>
+            </form>
+
+            <div class="formlist">
+                <ul>
+
+                    <li></li>
+                </ul>
+            </div>
+
+        </div>
+        </form>
+    </div>
+
+    </div>
+
+    <div class="treinamentoTopic">
+
+        <div class="form2">
+
+            <form>
+                <div class="inputBoxHome">
+                    <input type="text" placeholder="Digite o codigo" id="PesquisaPorCodigo">
+                </div>
+                <div class="inputBoxHome1">
+                    <input type="text" placeholder="Digite o Nome do treinamento" id="PesquisarTreinamento">
+                </div>
+                <div class="inputBoxHome2">
+                    <input type="submit" value="Pesquisar" onclick="Pesquisar(); return false">
+                </div>
+
+                <div class="inputBoxHome3">
+                    <input type="submit" value="Cadastrar" onclick="Cadastrar(); return false">
+                </div>
+
+                <div class="inputBoxHome4">
+                    <input type="submit" value="Editar" onclick="Editar(); return false">
+                </div>
+
+                <div class="inputBoxHome5">
+                    <input type="submit" value="Excluir" onclick="Excluir(); return false">
+                </div>
+
+                <div class="inputBoxHome6">
+                    <input type="submit" value="Vincular Curso" onclick="Excluir(); return false">
+                </div>
+
+                <div class="inputBoxHome7">
+                    <input type="submit" value="Vincular Usuario" onclick="Excluir(); return false">
+                </div>
+
+        </div>
+        <div class="formlist">
+            <ul>
+
+                <li></li>
+            </ul>
+        </div>
+        </form>
+    </div>
+
+    <div class="CursoTopic">
+
+        <div class="form2">
+
+            <form>
+                <div class="inputBoxHome">
+                    <input type="text" placeholder="Digite o Codigo" id="PesquisarCurso">
+                </div>
+                <div class="inputBoxHome1">
+                    <input type="text" placeholder="Digite o nome do curso" id="PesquisarCurso">
+                </div>
+                <div class="inputBoxHome2">
+                    <input type="submit" value="Pesquisar" onclick="Pesquisar(); return false">
+                </div>
+
+                <div class="inputBoxHome3">
+                    <input type="submit" value="Cadastrar" onclick="Cadastrar(); return false">
+                </div>
+
+                <div class="inputBoxHome4">
+                    <input type="submit" value="Editar" onclick="Editar(); return false">
+                </div>
+
+                <div class="inputBoxHome5">
+                    <input type="submit" value="Excluir" onclick="Excluir(); return false">
+                </div>
+
+        </div>
+        <div class="formlist">
+            <ul>
+
+                <li></li>
+            </ul>
+        </div>
+        </form>
+    </div>
+
+    <div class="VideosTopic">
+
+        <div class="form2">
+            <form>
+                <div class="inputBoxHome">
+                    <input type="text" placeholder="Digite o Codigo" id="PesquisarCurso">
+                </div>
+                <div class="inputBoxHome1">
+                    <input type="text" placeholder="Digite o nome do video" id="PesquisarCurso">
+                </div>
+                <div class="inputBoxHome2">
+                    <input type="submit" value="Pesquisar" onclick="Pesquisar(); return false">
+                </div>
+
+                <div class="inputBoxHome3">
+                    <input type="submit" value="Cadastrar" onclick="Cadastrar(); return false">
+                </div>
+
+                <div class="inputBoxHome4">
+                    <input type="submit" value="Editar" onclick="Editar(); return false">
+                </div>
+
+                <div class="inputBoxHome5">
+                    <input type="submit" value="Excluir" onclick="Excluir(); return false">
+                </div>
+
+        </div>
+        <div class="formlist">
+            <ul>
+
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+
+    <div class="ComentariosTopic">
+
+        <div class="form2">
+            <h1>EM CONSTRUÇÃO</h1>
+        </div>
+    </div>
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+    <script src="assets/js/home.js"></script>
+</body>
+
+</html>

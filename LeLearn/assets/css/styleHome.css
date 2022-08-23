@@ -1,0 +1,702 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #6d09ca;
+}
+
+.navigation {
+
+    position: fixed;
+    inset: 20px;
+    background: #000000;
+    width: 80px;
+    border-left: 10px solid #000000;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.05);
+    transition: 0.5s
+}
+
+.navigation.active {
+    width: 300px;
+    border-radius: 20px;
+}
+
+
+.toggle {
+
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.toggle::before {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 3px;
+    border-radius: 3px;
+    background: #365fa1;
+    transform: translateY(-5px);
+    transition: 1s;
+
+}
+
+.toggle::after {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 3px;
+    border-radius: 3px;
+    background: #365fa1;
+    transform: translateY(5px);
+    transition: 1s;
+}
+
+.navigation.active .toggle::before {
+
+    transform: translateY(0px) rotate(-405deg)
+}
+
+.navigation.active .toggle::after {
+
+    transform: translateY(0px) rotate(225deg)
+}
+
+.navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+}
+
+.navigation ul li {
+
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    /*background: #fff*/
+}
+
+
+.navigation ul li:hover {
+
+    background: #fff;
+    color: #222;
+}
+
+.navigation ul li:nth-child(1) {
+
+    top: 20px;
+    margin-bottom: 40px;
+    background: none;
+}
+
+.navigation ul li:not(:first-child):hover::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-bottom-right-radius: 20px;
+    box-shadow: 7.5px 7.5px 0 7.5px #fff;
+}
+
+.navigation ul li:not(:first-child):hover::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 7.5px -7.5px 0 7.5px #fff;
+}
+
+
+.navigation ul li a {
+
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+
+}
+
+.navigation ul li:hover:not(:first-child) a {
+    color: #365fa1;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.navigation ul li a .icon ion-icon {
+    font-size: 1.75em;
+}
+
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+
+}
+
+
+
+
+
+.navigationTopics {
+
+    position: fixed;
+    width: 75%;
+    height: 80%;
+    background: rgb(255, 255, 255);
+    top: 10%;
+    left: 320px;
+    border-right: 100px solid #000000;
+    border-radius: 50px;
+    border-top-left-radius: 0px;
+    box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.05);
+    transition: 0.5s;
+    display: none;
+
+}
+
+.treinamentoTopic{
+
+    position: fixed;
+    width: 75%;
+    height: 80%;
+    background: rgb(255, 255, 255);
+    top: 10%;
+    left: 320px;
+    border-right: 100px solid #000000;
+    border-radius: 50px;
+    border-top-left-radius: 0px;
+    box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.05);
+    transition: 0.5s;
+    display: none;
+
+}
+
+.CursoTopic {
+
+    position: fixed;
+    width: 75%;
+    height: 80%;
+    background: rgb(255, 255, 255);
+    top: 10%;
+    left: 320px;
+    border-right: 100px solid #000000;
+    border-radius: 50px;
+    border-top-left-radius: 0px;
+    box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.05);
+    transition: 0.5s;
+    display: none;
+
+}
+
+.VideosTopic {
+
+    position: fixed;
+    width: 75%;
+    height: 80%;
+    background: rgb(255, 255, 255);
+    top: 10%;
+    left: 320px;
+    border-right: 100px solid #000000;
+    border-radius: 50px;
+    border-top-left-radius: 0px;
+    box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.05);
+    transition: 0.5s;
+    display: none;
+
+}
+
+.ComentariosTopic {
+
+    position: fixed;
+    width: 75%;
+    height: 80%;
+    background: rgb(255, 0, 0);
+    top: 10%;
+    left: 320px;
+    border-right: 100px solid #000000;
+    border-radius: 50px;
+    border-top-left-radius: 0px;
+    box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.05);
+    transition: 0.5s;
+    display: none;
+
+}
+
+
+
+
+
+
+
+
+.navigationTopics .form2 .inputBoxHome input {
+    color: rgb(255, 255, 255);
+    background:rgb(238, 231, 231);
+    position: absolute;
+    top: 15px;
+    left: 50px;
+    border-radius: 35px;
+    height: 50px; 
+    width: 300px;
+    font-size: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(144, 87, 182, 0.5);
+    letter-spacing: 1px;
+    padding: 10px 20px;
+}
+
+.navigationTopics .form2 .inputBoxHome1 input {
+    color: rgb(255, 255, 255);
+    background:rgb(238, 231, 231);
+    position: absolute;
+    top: 15px;
+    left: 375px;
+    border-radius: 35px;
+    height: 50px;
+    width: 300px;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 1px solid rgba(144, 87, 182, 0.5);
+}
+.navigationTopics .form2 .inputBoxHome2 input {
+    color: rgb(255, 255, 255);
+    background:#6d09ca;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border-radius: 35px;
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid rgba(144, 87, 182, 0.5);
+}
+
+.navigationTopics .form2 .inputBoxHome3 input {
+    color: rgb(255, 255, 255);
+    background:#6d09ca;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    border-radius: 35px;
+    height: 50px;
+    width: 110px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid rgba(144, 87, 182, 0.5);
+}
+
+.navigationTopics .form2 .inputBoxHome4 input {
+    color: rgb(255, 255, 255);
+    background:#6d09ca;
+    position: absolute;
+    bottom: 30px;
+    left: 150px;
+    border-radius: 35px;
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid rgba(144, 87, 182, 0.5);
+}
+
+.navigationTopics .form2 .inputBoxHome5 input {
+    color: rgb(255, 255, 255);
+    background:#6d09ca;
+    position: absolute;
+    bottom: 30px;
+    left: 260px;
+    border-radius: 35px;
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid rgba(144, 87, 182, 0.5);
+    
+}
+
+
+
+
+
+
+
+.treinamentoTopic .form2 .inputBoxHome input {
+    color: rgb(255, 255, 255);
+    background:rgb(238, 231, 231);
+    position: absolute;
+    top: 15px;
+    left: 50px;
+    border-radius: 35px;
+    height: 50px; 
+    width: 300px;
+    font-size: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(144, 87, 182, 0.5);
+    letter-spacing: 1px;
+    padding: 10px 20px;
+
+}
+
+.treinamentoTopic .form2 .inputBoxHome1 input {
+    color: rgb(255, 255, 255);
+    background:rgb(238, 231, 231);
+    position: absolute;
+    top: 15px;
+    left: 375px;
+    border-radius: 35px;
+    height: 50px;
+    width: 350px;
+    font-size: 16px;
+    border: 1px solid rgba(144, 87, 182, 0.5);
+    letter-spacing: 1px;
+    padding: 10px 20px;
+}
+    
+
+.treinamentoTopic .form2 .inputBoxHome2 input {
+    color: rgb(255, 255, 255);
+    background:#6d09ca;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border-radius: 35px;
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid rgba(144, 87, 182, 0.5);
+}
+
+.treinamentoTopic .form2 .inputBoxHome3 input {
+    color: rgb(255, 255, 255);
+    background:#6d09ca;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    border-radius: 35px;
+    height: 50px;
+    width: 110px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid rgba(144, 87, 182, 0.5);
+}
+
+.treinamentoTopic .form2 .inputBoxHome4 input {
+    color: rgb(255, 255, 255);
+    background:#6d09ca;
+    position: absolute;
+    bottom: 30px;
+    left: 150px;
+    border-radius: 35px;
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid rgba(144, 87, 182, 0.5);
+}
+
+.treinamentoTopic .form2 .inputBoxHome5 input {
+    color: rgb(255, 255, 255);
+    background:#6d09ca;
+    position: absolute;
+    bottom: 30px;
+    left: 260px;
+    border-radius: 35px;
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid rgba(144, 87, 182, 0.5);
+    
+}
+
+.treinamentoTopic .form2 .inputBoxHome6 input {
+    color: rgb(255, 255, 255);
+    background:#6d09ca;
+    position: absolute;
+    bottom: 30px;
+    left: 370px;
+    border-radius: 35px;
+    height: 50px;
+    width: 160px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid rgba(144, 87, 182, 0.5);    
+}
+
+.treinamentoTopic .form2 .inputBoxHome7 input {
+    color: rgb(255, 255, 255);
+    background:#6d09ca;
+    position: absolute;
+    bottom: 30px;
+    left: 540px;
+    border-radius: 35px;
+    height: 50px;
+    width: 160px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid rgba(144, 87, 182, 0.5);    
+}
+
+
+
+
+
+
+
+
+
+.CursoTopic .form2 .inputBoxHome input {
+    color: rgb(255, 255, 255);
+    background:rgb(238, 231, 231);
+    position: absolute;
+    top: 15px;
+    left: 50px;
+    border-radius: 35px;
+    height: 50px; 
+    width: 300px;
+    font-size: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(144, 87, 182, 0.5);
+    letter-spacing: 1px;
+    padding: 10px 20px;
+}
+
+.CursoTopic .form2 .inputBoxHome1 input {
+    color: rgb(255, 255, 255);
+    background:rgb(238, 231, 231);
+    position: absolute;
+    top: 15px;
+    left: 375px;
+    border-radius: 35px;
+    height: 50px;
+    width: 300px;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 1px solid rgba(144, 87, 182, 0.5);
+    
+}
+.CursoTopic .form2 .inputBoxHome2 input {
+    color: rgb(255, 255, 255);
+    background:#6d09ca;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border-radius: 35px;
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid rgba(144, 87, 182, 0.5);
+}
+
+.CursoTopic .form2 .inputBoxHome3 input {
+    color: rgb(255, 255, 255);
+    background:#6d09ca;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    border-radius: 35px;
+    height: 50px;
+    width: 110px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid rgba(144, 87, 182, 0.5);
+}
+
+.CursoTopic .form2 .inputBoxHome4 input {
+    color: rgb(255, 255, 255);
+    background:#6d09ca;
+    position: absolute;
+    bottom: 30px;
+    left: 150px;
+    border-radius: 35px;
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid rgba(144, 87, 182, 0.5);
+}
+
+.CursoTopic .form2 .inputBoxHome5 input {
+    color: rgb(255, 255, 255);
+    background:#6d09ca;
+    position: absolute;
+    bottom: 30px;
+    left: 260px;
+    border-radius: 35px;
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid rgba(144, 87, 182, 0.5);
+    
+}
+
+
+
+
+.VideosTopic .form2 .inputBoxHome input {
+    color: rgb(255, 255, 255);
+    background:rgb(238, 231, 231);
+    position: absolute;
+    top: 15px;
+    left: 50px;
+    border-radius: 35px;
+    height: 50px; 
+    width: 300px;
+    font-size: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(144, 87, 182, 0.5);
+    letter-spacing: 1px;
+    padding: 10px 20px;
+}
+
+.VideosTopic .form2 .inputBoxHome1 input {
+    color: rgb(255, 255, 255);
+    background:rgb(238, 231, 231);
+    position: absolute;
+    top: 15px;
+    left: 375px;
+    border-radius: 35px;
+    height: 50px;
+    width: 300px;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 1px solid rgba(144, 87, 182, 0.5);
+
+}
+
+.VideosTopic .form2 .inputBoxHome2 input {
+    color: rgb(255, 255, 255);
+    background:#6d09ca;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border-radius: 35px;
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid rgba(144, 87, 182, 0.5);
+}
+
+.VideosTopic .form2 .inputBoxHome3 input {
+    color: rgb(255, 255, 255);
+    background:#6d09ca;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    border-radius: 35px;
+    height: 50px;
+    width: 110px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid rgba(144, 87, 182, 0.5);
+}
+
+.VideosTopic .form2 .inputBoxHome4 input {
+    color: rgb(255, 255, 255);
+    background:#6d09ca;
+    position: absolute;
+    bottom: 30px;
+    left: 150px;
+    border-radius: 35px;
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid rgba(144, 87, 182, 0.5);
+}
+
+.VideosTopic .form2 .inputBoxHome5 input {
+    color: rgb(255, 255, 255);
+    background:#6d09ca;
+    position: absolute;
+    bottom: 30px;
+    left: 260px;
+    border-radius: 35px;
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid rgba(144, 87, 182, 0.5);
+    
+}
+
+
+
+.formlist {
+
+    position: absolute;
+    width: 80%;
+    height: 65%;
+    background: rgb(235, 213, 213);
+    top: 16%;
+    left: 100px;   
+    border-radius: 7px;
+    box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.05); 
+    overflow-y: scroll;
+    
+}
+.formlist ul li{
+    list-style: none;
+}
+
+.formlist::-webkit-scrollbar{
+    width: 9px;
+    border-radius: 6px;
+    border: 1px solid rgba(144, 87, 182, 0.5);
+    background:#6d09ca;
+}
+
+.formlist::-webkit-scrollbar-thumb{
+    width: 9px;
+    border-radius: 7px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
